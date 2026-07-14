@@ -31,6 +31,7 @@ const setAnswer = (keys, nr) => {
     'Alice in wonderland': aliceInWonderland,
     'Down of the zombies': downofthezombies,
     'The basement': theBasement,
+    'Secret agent': agent,
   }
   const answer = answers[gameMode]
   const reveal = document.querySelector(`#reveal-${nr}`)
