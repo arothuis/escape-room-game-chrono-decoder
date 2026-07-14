@@ -1,12 +1,16 @@
 <script>
-  import { selectedMission, solvedParts } from './stores.js';
-  import { missionNames } from './answers.js';
+  import { selectedMission, solvedParts, timer } from './stores.js';
+  import { missionNames, missions } from './answers.js';
+
+  let selected = $derived($selectedMission ?? '');
 
   function selectMission(e) {
     const name = e.target.value;
+    selectedMission.set(name || null);
     if (name) {
-      selectedMission.set(name);
-      solvedParts.set([false, false, false]);
+      const mission = missions[name];
+      solvedParts.set(new Array(mission.codes.length).fill(false));
+      timer.reset(mission.duration);
     }
   }
 </script>
@@ -20,10 +24,10 @@
     />
   </div>
 
-  <select class="mission-select" onchange={selectMission}>
+  <select class="mission-select" value={selected} onchange={selectMission}>
     <option value="">Choose a mission…</option>
     {#each missionNames as name}
-      <option value={name} selected={$selectedMission === name}>{name}</option>
+      <option value={name}>{name}</option>
     {/each}
   </select>
 </header>
@@ -75,12 +79,17 @@
 
   @media (max-width: 600px) {
     header {
-      padding: 0.75rem 1rem;
+      padding: 0.5rem 0.75rem;
       justify-content: center;
+    }
+
+    .logo-img {
+      height: 32px;
     }
 
     .mission-select {
       width: 100%;
+      font-size: 0.85rem;
     }
   }
 </style>

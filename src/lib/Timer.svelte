@@ -260,12 +260,29 @@
 
   @media (max-width: 500px) {
     .timer-bar {
-      padding: 0.75rem 1rem;
+      padding: 0.5rem 0.75rem;
+      gap: 0.5rem;
+    }
+
+    .timer-btn {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.75rem;
     }
 
     .timer-display {
-      font-size: 1.6rem;
-      padding: 0.25rem 0.75rem;
+      font-size: 1.25rem;
+      padding: 0.2rem 0.5rem;
+      min-width: 120px;
+    }
+
+    .timer-status {
+      font-size: 0.65rem;
+      min-width: 50px;
+    }
+
+    .mute-btn {
+      font-size: 0.55rem;
+      padding: 2px 5px;
     }
   }
 </style>

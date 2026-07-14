@@ -1,11 +1,12 @@
 <script>
-  import { selectedMission, solvedParts, allSolved, timer } from './stores.js';
+  import { selectedMission, solvedParts, allSolved, timer, currentAnswers } from './stores.js';
   import KeyInput from './KeyInput.svelte';
   import { fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
 
   let currentPart = $state(0);
   let showInput = $state(true);
+  let totalParts = $derived($currentAnswers?.length ?? 3);
 
   $effect(() => {
     if (!$selectedMission) {
@@ -17,7 +18,7 @@
 
   $effect(() => {
     const parts = $solvedParts;
-    if (parts[currentPart] && currentPart < 2) {
+    if (parts[currentPart] && currentPart < totalParts - 1) {
       const delay = setTimeout(() => {
         showInput = false;
       }, 250);
@@ -95,9 +96,9 @@
   {:else}
     <div class="game-area">
       <div class="step-info">
-        <span class="step-counter">Code {currentPart + 1} of 3</span>
+        <span class="step-counter">Code {currentPart + 1} of {totalParts}</span>
         <div class="step-dots">
-          {#each [0, 1, 2] as i}
+          {#each { length: totalParts } as _, i}
             <span
               class="dot"
               class:active={i === currentPart}

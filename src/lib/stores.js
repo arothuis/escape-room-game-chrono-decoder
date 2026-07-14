@@ -5,7 +5,7 @@ export const selectedMission = writable(null);
 export const solvedParts = writable([false, false, false]);
 
 export const currentAnswers = derived(selectedMission, ($mission) => {
-  return $mission ? missions[$mission] : null;
+  return $mission ? missions[$mission].codes : null;
 });
 
 export const allSolved = derived(solvedParts, ($parts) => {
@@ -88,7 +88,7 @@ function createTimerStore() {
     });
   }
 
-  function reset() {
+  function reset(duration = 60) {
     clearInterval(intervalId);
     intervalId = null;
     set({
@@ -96,7 +96,7 @@ function createTimerStore() {
       hasStarted: false,
       overtime: false,
       tickCount: 0,
-      minutes: 60,
+      minutes: duration,
       seconds: 0,
     });
   }
