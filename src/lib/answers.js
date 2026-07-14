@@ -1,6 +1,6 @@
 export const missions = {
-  'Test: 1111': { duration: 60, codes: ['1111', '1111', '1111'] },
-  'Test: 2 codes': { duration: 60, codes: ['2222', '3333'] },
+  'Test: 1111': { duration: 1, codes: ['1111', '1111', '1111'] },
+  'Test: 2 codes': { duration: 10, codes: ['2222', '3333'] },
   'Panic on the Titanic': { duration: 60, codes: ['4332', '5411', '6362'] },
   'Virus': { duration: 60, codes: ['3615', '4156', '1341'] },
   'Nuclear Countdown': { duration: 60, codes: ['1622', '5411', '5234'] },
