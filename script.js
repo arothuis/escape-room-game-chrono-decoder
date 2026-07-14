@@ -25,6 +25,9 @@ const setAnswer = (keys, nr) => {
   const gameMode = document.querySelector('h1').textContent
   let answers = {
     'Panic on the Titanic': panicOnTheTitanic,
+    'Virus': virus,
+    'Nuclear Countdown': nuclear,
+    'Temple of the Aztec': temple,
     'Alice in wonderland': aliceInWonderland,
     'Down of the zombies': downofthezombies,
     'The basement': theBasement,
@@ -104,7 +107,7 @@ document.querySelector('button').addEventListener('click', e => {
       }else if(minutes % 5 === 0 && seconds === 0){
         playAudio('assets/info.wav')
       }
-      
+
     }, 1000)
   }else{
     e.target.textContent = 'START'
