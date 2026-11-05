@@ -1,1 +1,0 @@
-const panicOnTheTitanic = ['4332', '5411', '6362']

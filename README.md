@@ -1,8 +1,7 @@
-Forked from [gautemo's original](https://github.com/gautemo/escape-room-game-chrono-decoder) 
-via [caribbeanwebdev's changes](https://github.com/caribbeanwebdev/escape-room-game-chrono-decoder)
+# Escape Room The Game: Chrono Decoder
 
-# escape-room-game-chrono-decoder
-Chrono decoder website for the boardgame Escape Room The Game. 
+Forked from [gautemo's original](https://github.com/gautemo/escape-room-game-chrono-decoder)
+via [caribbeanwebdev's changes](https://github.com/caribbeanwebdev/escape-room-game-chrono-decoder)
 
 Original: [gautemo.github.io/escape-room-game-chrono-decoder/](https://gautemo.github.io/escape-room-game-chrono-decoder/)
 
