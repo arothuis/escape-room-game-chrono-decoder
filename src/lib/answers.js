@@ -15,6 +15,7 @@ export const missions = {
   'Kidnapped': { duration: 15, codes: ['6153'] },
   'Prison Island': { duration: 60, codes: ['6251', '5216', '5156'] },
   'Asylum / Madhouse': { duration: 60, codes: ['3216', '6234', '3635'] },
+  'The Dentist': { duration: 60, codes: ['2361', '3413', '3635'] },
   'Jungle: Magic Monkey': { duration: 60, codes: ['3615', '4156', '3635'] },
   'Jungle: Snake Bite': { duration: 60, codes: ['1454', '4352', '6412'] },
   'Jungle: Moon Portal': { duration: 60, codes: ['1622', '4352', '5234'] },
