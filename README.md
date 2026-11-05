@@ -1,4 +1,4 @@
-# escape-room-game-chrono-decoder
+# Escape Room The Game: Chrono Decoder
 Chrono decoder website for the boardgame Escape Room The Game. 
 
 [gautemo.github.io/escape-room-game-chrono-decoder/](https://gautemo.github.io/escape-room-game-chrono-decoder/)
